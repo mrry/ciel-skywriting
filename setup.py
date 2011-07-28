@@ -9,7 +9,7 @@ setup(
     url = "http://www.cl.cam.ac.uk/netos/ciel/skywriting/",
     packages = [ 'swi' ],
     package_dir = { '' : 'src/python' },
-    entry_points = {'console_scripts' : ['skywriting=swi:main', 'sw-job=swi:cluster'],
+    entry_points = {'console_scripts' : ['skywriting=swi.interpreter:main', 'sw-job=swi.submit:main'],
                     'ciel.executor.plugin' : ['swi=swi.executor:load']},
     data_files = [ ("lib/ciel/skywriting/stdlib/",
                    ["src/sw/stdlib/%s" %s for s in
