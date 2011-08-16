@@ -11,7 +11,7 @@
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-from skywriting.runtime.exceptions import UnknownIdentifierError,\
+from ciel.runtime.exceptions import UnknownIdentifierError,\
     TaskFailedError
 
 '''
@@ -19,12 +19,12 @@ Created on 23 Feb 2010
 
 @author: dgm36
 '''
-from skywriting.lang import ast
-from skywriting.lang.visitors import ExpressionEvaluatorVisitor,\
+from swi import ast
+from swi.visitors import ExpressionEvaluatorVisitor,\
     SWDynamicScopeWrapper
-from skywriting.lang.resume import ContextAssignRR,\
+from swi.resume import ContextAssignRR,\
     IndexedLValueRR
-from skywriting.lang.datatypes import all_leaf_values
+from swi.datatypes import all_leaf_values
 
 class LambdaFunction:
     

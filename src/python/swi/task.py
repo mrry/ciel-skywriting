@@ -1,16 +1,16 @@
 
-from skywriting.runtime.exceptions import ExecutionInterruption, ReferenceUnavailableException,\
+from ciel.runtime.exceptions import ExecutionInterruption, ReferenceUnavailableException,\
     BlameUserException, UnknownIdentifierError, RuntimeSkywritingError,\
     TaskFailedError
-from skywriting.lang.context import SimpleContext, TaskContext,\
+from swi.context import SimpleContext, TaskContext,\
     LambdaFunction
-from skywriting.lang.visitors import \
+from swi.visitors import \
     StatementExecutorVisitor, SWDereferenceWrapper
-from skywriting.lang import ast
-from skywriting.lang.parser import \
+from swi import ast
+from swi.parser import \
     SWScriptParser
-from skywriting.lang.datatypes import map_leaf_values
-from skywriting.lang.parser import CloudScriptParser
+from swi.datatypes import map_leaf_values
+from swi.parser import CloudScriptParser
 from shared.references import SWErrorReference, decode_datavalue_string,\
     SWReferenceJSONEncoder, json_decode_object_hook, SWRealReference,\
     encode_datavalue

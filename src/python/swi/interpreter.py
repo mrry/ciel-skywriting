@@ -16,7 +16,7 @@ import optparse
 import sys
 import traceback
 
-from skywriting.lang.task import SkywritingTask
+from swi.task import SkywritingTask
 from shared.rpc_helper import RpcHelper, ShutdownException
 
 def main():

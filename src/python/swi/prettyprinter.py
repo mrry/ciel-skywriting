@@ -11,8 +11,8 @@
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-from skywriting.lang.visitors import Visitor
-from skywriting.lang.parser import CloudScriptParser
+from swi.visitors import Visitor
+from swi.parser import CloudScriptParser
 import collections
 import sys
 

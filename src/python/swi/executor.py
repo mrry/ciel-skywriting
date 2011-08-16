@@ -11,10 +11,10 @@
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-from skywriting.runtime.executors.proc import ProcExecutor
+from ciel.runtime.executors.proc import ProcExecutor
 import os
-from skywriting.runtime.exceptions import BlameUserException
-from skywriting.runtime.executors import add_package_dep, test_program
+from ciel.runtime.exceptions import BlameUserException
+from ciel.runtime.executors import add_package_dep, test_program
 import ciel
 import logging
 

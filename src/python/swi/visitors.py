@@ -11,7 +11,7 @@
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-from skywriting.runtime.exceptions import RuntimeSkywritingError,\
+from ciel.runtime.exceptions import RuntimeSkywritingError,\
     ReferenceUnavailableException
 
 '''
@@ -19,11 +19,11 @@ Created on 23 Feb 2010
 
 @author: dgm36
 '''
-from skywriting.lang.resume import BinaryExpressionRR,\
+from swi.resume import BinaryExpressionRR,\
     FunctionCallRR, ListRR, DictRR, StatementListRR, DoRR, IfRR, WhileRR, ForRR,\
     ListIndexRR, AssignmentRR, ReturnRR, PlusRR, LessThanOrEqualRR, EqualRR,\
     StarRR, ForceEvalRR, PlusAssignmentRR, IncludeRR
-from skywriting.lang.datatypes import map_leaf_values
+from swi.datatypes import map_leaf_values
 
 indent = 0
 

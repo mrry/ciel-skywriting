@@ -17,9 +17,9 @@ Created on 22 Feb 2010
 
 @author: dgm36
 '''
-from skywriting.lang.lexer import CloudScriptLexer
+from swi.lexer import CloudScriptLexer
 import ply.yacc
-from skywriting.lang import ast
+from swi import ast
 
 class SyntaxException:
     def __init__(self, token):

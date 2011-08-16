@@ -11,15 +11,15 @@
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-from skywriting.runtime.exceptions import ErrorReferenceError
+from ciel.runtime.exceptions import ErrorReferenceError
 
 '''
 Created on 15 Apr 2010
 
 @author: dgm36
 '''
-from skywriting.runtime.object_cache import retrieve_object_for_ref
-import skywriting.runtime.util.start_job
+from ciel.runtime.object_cache import retrieve_object_for_ref
+import ciel.runtime.util.start_job
 import time
 import datetime
 import sys
@@ -66,9 +66,9 @@ def main():
     else:
         swi_args["start_env"] = {}
 
-    new_job = skywriting.runtime.util.start_job.submit_job_with_package(swi_package, "swi", swi_args, {}, os.getcwd(), master_uri, args)
+    new_job = ciel.runtime.util.start_job.submit_job_with_package(swi_package, "swi", swi_args, {}, os.getcwd(), master_uri, args)
     
-    result = skywriting.runtime.util.start_job.await_job(new_job["job_id"], master_uri)
+    result = ciel.runtime.util.start_job.await_job(new_job["job_id"], master_uri)
     
     try:
         reflist = retrieve_object_for_ref(result, "json", None)
