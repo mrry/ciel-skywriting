@@ -17,7 +17,7 @@ import sys
 import traceback
 
 from swi.task import SkywritingTask
-from shared.rpc_helper import RpcHelper, ShutdownException
+from ciel.public.rpc_helper import RpcHelper, ShutdownException
 
 def main():
     

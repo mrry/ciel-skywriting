@@ -7,7 +7,7 @@ setup(
     author = "Derek Murray",
     author_email = "Derek.Murray@cl.cam.ac.uk",
     url = "http://www.cl.cam.ac.uk/netos/ciel/skywriting/",
-    packages = [ 'swi' ],
+    packages = [ 'swi', 'swi.stdlib' ],
     package_dir = { '' : 'src/python' },
     entry_points = {'console_scripts' : ['skywriting=swi.interpreter:main', 'sw-job=swi.submit:main'],
                     'ciel.executor.plugin' : ['swi=swi.executor:load']},

@@ -1,1 +1,1 @@
-include src/sw/stdlib/*
+include src/python/swi/stdlib/*

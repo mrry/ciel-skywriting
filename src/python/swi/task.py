@@ -11,10 +11,10 @@ from swi.parser import \
     SWScriptParser
 from swi.datatypes import map_leaf_values
 from swi.parser import CloudScriptParser
-from shared.references import SWErrorReference, decode_datavalue_string,\
+from ciel.public.references import SWErrorReference, decode_datavalue_string,\
     SWReferenceJSONEncoder, json_decode_object_hook, SWRealReference,\
     encode_datavalue
-from shared.io_helpers import MaybeFile
+from ciel.public.io_helpers import MaybeFile
 
 import simplejson
 import pickle
@@ -239,7 +239,8 @@ class SkywritingTask:
                     raise
             else:
                 try:
-                    with open(resource_filename(Requirement.parse("ciel"), os.path.join("share/ciel/skywriting/stdlib/", target_expr)), "r") as fp:
+                    print resource_filename(Requirement.parse("ciel-skywriting"), os.path.join("swi/stdlib/", target_expr))
+                    with open(resource_filename(Requirement.parse("ciel-skywriting"), os.path.join("swi/stdlib/", target_expr)), "r") as fp:
                         script_str = fp.read()
                 except Exception as e:
                     print >>sys.stderr, "Include file failed:", repr(e)
