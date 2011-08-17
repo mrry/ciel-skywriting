@@ -239,7 +239,6 @@ class SkywritingTask:
                     raise
             else:
                 try:
-                    print resource_filename(Requirement.parse("ciel-skywriting"), os.path.join("swi/stdlib/", target_expr))
                     with open(resource_filename(Requirement.parse("ciel-skywriting"), os.path.join("swi/stdlib/", target_expr)), "r") as fp:
                         script_str = fp.read()
                 except Exception as e:
