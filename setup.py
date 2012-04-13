@@ -12,7 +12,7 @@ setup(
     entry_points = {'console_scripts' : ['skywriting=swi.interpreter:main', 'sw-job=swi.submit:main'],
                     'ciel.executor.plugin' : ['swi=swi.executor:load']},
     data_files = [ ("lib/ciel/skywriting/stdlib/",
-                   ["src/sw/stdlib/%s" %s for s in
+                   ["src/python/swi/stdlib/%s" %s for s in
                      ["environ", "grab", "java", "mapreduce",
                       "stdinout", "sync"]])],
     classifiers = [

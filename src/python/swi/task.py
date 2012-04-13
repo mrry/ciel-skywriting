@@ -239,7 +239,7 @@ class SkywritingTask:
                     raise
             else:
                 try:
-                    with open(resource_filename(Requirement.parse("ciel-skywriting"), os.path.join("swi/stdlib/", target_expr)), "r") as fp:
+                    with open(resource_filename(Requirement.parse("ciel-skywriting"), os.path.join("python/swi/stdlib/", target_expr)), "r") as fp:
                         script_str = fp.read()
                 except Exception as e:
                     print >>sys.stderr, "Include file failed:", repr(e)
